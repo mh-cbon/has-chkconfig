@@ -1,0 +1,27 @@
+{
+  "name": "@mh-cbon/has-chkconfig",
+  "version": "1.0.0",
+  "description": "Tells if a system runs chkconfig sysvinit helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-not-rhel": "sh ./mocha-not-rhel.sh",
+    "test-rhel": "sh ./mocha-rhel.sh",
+    "patch": "npm version patch -m \"patch %s\"",
+    "minor": "npm version minor -m \"minor %s\"",
+    "major": "npm version major -m \"major %s\"",
+    "preversion": "echo \"npm test: not defined\"",
+    "version": "echo \"npm run build: not defined\"",
+    "postversion": "git push && git push --tags && npm run public",
+    "public": "npm publish --access=public"
+  },
+  "keywords": [
+    "chkconfig",
+    "service"
+  ],
+  "author": "mh-cbon <mh-cbon@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "should": "^8.3.0"
+  }
+}

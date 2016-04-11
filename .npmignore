@@ -1,0 +1,7 @@
+/.vagrant/
+/test/
+/Vagrantfile
+mocha-not-rhel.sh
+mocha-rhel.sh
+run-tests-rhel.sh
+run-tests-not-rhel.sh

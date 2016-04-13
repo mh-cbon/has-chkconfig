@@ -1,6 +1,6 @@
 {
   "name": "@mh-cbon/has-chkconfig",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tells if a system runs chkconfig sysvinit helper",
   "main": "index.js",
   "scripts": {

@@ -1,0 +1,6 @@
+{
+  "name": "Has-chkconfig",
+  "tagline": "Tells if a system runs chkconfig",
+  "body": "# has-chkconfig\r\n\r\nTells if a system runs `chkconfig`\r\n\r\n# install\r\n\r\n```sh\r\nnpm i @mh-cbon/has-chkconfig --save\r\n```\r\n\r\n# Usage\r\n\r\n```js\r\nrequire('@mh-cbon/has-chkconfig')(function (err, path){\r\n  err && console.error(\"This system does not run chkconfig\")\r\n  !err && console.log(\"This system provides chkconfig at %j\", path)\r\n}))\r\n```\r\n\r\n# Read more\r\n\r\n- https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/s2-services-chkconfig.html\r\n- http://linux.die.net/man/8/chkconfig\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

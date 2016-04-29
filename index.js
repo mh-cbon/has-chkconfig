@@ -5,12 +5,18 @@ var hasChkconfig = function (then) {
   c.stdout.on('data', function (d){
     d = d.toString()
     if (d.match(/^chkconfig version .+/)) {
-      then(null, 'chkconfig'); then = null;
+      then && then(null, 'chkconfig');
+      then = null;
     }
   })
-  c.on('error', then)
+  c.on('error', function (err) {
+    then && then(err);
+    then = null;
+  })
   c.on('close', function (code){
-    then && then(code > 0 ? "error" : null, 'chkconfig')
+    if (code===0) then && then(null, 'chkconfig')
+    else then && then("chkconfig not found")
+    then = null;
   })
 }
 
